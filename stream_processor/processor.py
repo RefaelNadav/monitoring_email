@@ -30,14 +30,9 @@ def is_explosive(email):
     return False
 
 for message in consumer:
-    try:
-        email = message.value
-    except Exception as e:
-        print("Deserialization error:", e)
-
-    print("Received message:", message)
     email = message.value
-    print("Decoded message:", email)
+
+    print("Received message:", email)
     # producer.send('all_messages', email)
     if is_hostage(email):
         producer.send('messages.hostage', value=email)
