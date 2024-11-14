@@ -15,7 +15,7 @@ services:
     environment:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_ADVERTISED_HOST_NAME: kafka
-      KAFKA_CREATE_TOPICS: "messages.all:1:1, messages.explosive:1:1, messages.hostage:1:1"
+      KAFKA_CREATE_TOPICS: "messages.all:3:1, messages.explosive:3:1, messages.hostage:3:1"
     depends_on:
       - zookeeper
     healthcheck:
